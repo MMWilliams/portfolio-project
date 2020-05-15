@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'jobs.apps.JobsConfig',
+    'blog.apps.BlogConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -75,8 +78,12 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfoliodb',
+        'USER': 'postgres',
+        'PASSWORD': 'Welcome1@',
+        'HOST': 'localhost',
+        'PORT': '5433'
     }
 }
 
@@ -118,3 +125,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Telling Django where media files should be shared
+#Project base directory > 
+#anytime someone saves a file from a class it should go inside the media folder
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#when someone is trying to access an image, where should they do that?
+#name of website/media/file name - will be location of th emedia file
+MEDIA_URL = '/media/'
