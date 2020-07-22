@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +13,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
     <title>Maureese Williams</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
 <!-- CSS only -->
@@ -32,7 +33,7 @@
               <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link " href="https://www.linkedin.com/in/maureese-williams-8a71b637?trk=seokp-title-professional-cta">LinkedIn</a>
                 <a class="nav-item nav-link" href="{% static 'Maureese_Williams.pdf' %}">Resume</a>
-                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Skills</a>
+                <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
 
               </div>
             </div>
@@ -48,7 +49,6 @@
       <h1>Maureese Williams</h1>
       <p class="lead text-muted">Hi! Welcome to my online portfolio. <br />
            This website was designed to provied interested parties with a better understanding of my skillset</p>
-           This website was built using Django + Bootstrap
       <p>
         <a href="mailto:maureesewilliams@gmail.com?subject=Portfolio Inquiry" class="btn btn-primary my-2">Email Me</a>
       </p>
@@ -56,33 +56,25 @@
     </div>
   </section>
 
-  <center>
+
   <div class="container">
-<H1>Past Roles</H1>
-<p>Please see resume for more details</p>
-</div>
+<center>
+  <h1 class="text-center">{{ blog.title }}</h1>
+  <p class="text-center"> {{ blog.pub_date }}</p>
+
+  <img class="img-fluid" src="{{ blog.image.url }}" height="700" width="700"/>
 </center>
+    <hr />
+    <br />
+    <p class="text-center"> {{ blog.body }}</p>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+    <br />
+    <br />
+    <br />
+    <hr />
+</div>
 
-      <div class="row">
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}"  height="200" />
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
 
-            </div>
-          </div>
-        </div>
-
-        {% endfor %}
-
-      </div>
-    </div>
-  </div>
 
 </main>
 

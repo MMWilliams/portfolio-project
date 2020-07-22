@@ -9,3 +9,7 @@ class Job(models.Model):
     #whenever an image is uploaded, where is is saved to
     image = models.ImageField(upload_to='images/')
     summary = models.CharField(max_length=200)
+
+
+    def __str__(self):
+        return self.summary

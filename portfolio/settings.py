@@ -125,7 +125,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
+STATICFILES_DIRS = [
+            os.path.join(BASE_DIR, 'portfolio/static')
+
+]
 #Telling Django where media files should be shared
 #Project base directory > 
 #anytime someone saves a file from a class it should go inside the media folder
