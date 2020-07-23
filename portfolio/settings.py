@@ -133,10 +133,16 @@ STATICFILES_DIRS = [
 
 ]
 #Telling Django where media files should be shared
-#Project base directory > 
+#Project base directory >
 #anytime someone saves a file from a class it should go inside the media folder
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #when someone is trying to access an image, where should they do that?
 #name of website/media/file name - will be location of th emedia file
 MEDIA_URL = '/media/'
+
+#overriding our current database setting 
+try:
+    from local_settings import *
+except ImportError:
+    pass
