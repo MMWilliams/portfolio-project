@@ -25,7 +25,7 @@ SECRET_KEY = '#&5po8%8@%x93a!um6a$_qjx1j-_va(f3*&f*hg2*wxo61ts70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['maureesewilliams.com','www.maureesewilliams.com','https://maureesewilliams.com','']
 
 
 # Application definition
@@ -141,7 +141,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #name of website/media/file name - will be location of th emedia file
 MEDIA_URL = '/media/'
 
-#overriding our current database setting 
+#overriding our current database setting
 try:
     from local_settings import *
 except ImportError:
