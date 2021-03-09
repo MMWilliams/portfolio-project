@@ -25,7 +25,9 @@ SECRET_KEY = '#&5po8%8@%x93a!um6a$_qjx1j-_va(f3*&f*hg2*wxo61ts70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['maureesewilliams.com','www.maureesewilliams.com','https://maureesewilliams.com','']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/','http://127.0.0.1','127.0.0.1',
+                    'maureesewilliams.com','www.maureesewilliams.com',
+                    'https://maureesewilliams.com','']
 
 
 # Application definition
